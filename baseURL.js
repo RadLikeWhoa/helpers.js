@@ -1,8 +1,13 @@
 /**
- * Name:              baseURL
- * Description:       Find only the root name of any given URL. Optionally, the Top Level Domain can be hidden as well.
- * Example Usage:     baseURL('http://maxvoltar.com/archive/more-beats')
- * Arguments:         url (string), hideTLD (bool)
+ * Name                   baseURL()
+ * Description            Find only the root name of any given URL. Optionally,
+ *                        the Top Level Domain can be hidden as well.
+ *
+ * baseURL('http://www.maxvoltar.com/archive/more-beats')
+ *
+ * @param     {string}    url
+ * @param     {bool}      hideTLD
+ * @return    {string}
  */
 
 var baseURL = function (url, hideTLD) {

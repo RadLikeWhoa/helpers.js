@@ -1,18 +1,22 @@
 /**
- * Name:              wordcount
- * Description:       Count the words inside a given element. The output can be formatted using the {words} placeholder.
- * Example Usage:     wordcount(document.getElementById('text').textContent, 'This text is {words} long.')
- * Arguments:         text (string), format (string)
+ * Name                   wordcount()
+ * Description            Count the words inside a given element. The output
+ *                        can be formatted using the {count} placeholder.
+ *
+ * wordcount('Hello, it\'s me', 'This is {count} words long.')
+ *
+ * @param     {string}    text
+ * @param     {string}    format
+ * @return    {string} / {number}
  */
 
 var wordcount = function (text, format) {
     var text = text.replace(/\s+/g, ' ').split(' ').length - 1,
-        count = 0,
-        output = format || '{words}';
+        count = 0;
 
     do {
         count++;
     } while (text--);
 
-    return output.replace(/\{words\}/, count);
+    return format ? format.replace(/\{count\}/, count) : count;
 };

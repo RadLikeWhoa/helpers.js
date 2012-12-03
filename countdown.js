@@ -1,5 +1,5 @@
 /*
-    Name:              countdown
+    Name:              countdown()
     Description:       Display a simple countdown from the current time to a defined end date.
     Example Usage:     countdown({
                            endDate: '05/14/2013',
@@ -18,7 +18,7 @@
                        }
 */
 
-var countdown = function(config) {
+var countdown = function (config) {
     var endDate = typeof config === 'string' ? config : config.endDate,
         remainder = (new Date(endDate) - new Date()) / 86400000,
         output = (config.output || '{days}').replace(/\{days\}/, Math.ceil(remainder));
