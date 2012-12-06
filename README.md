@@ -35,3 +35,16 @@ Counts the words in any given string of text and counts the words correctly. You
 ```js
 wordcount('Hello, it\'s me', 'This is {count} words long.')
 ```
+
+__countdown()__
+
+Display a simple countdown from the current time to a defined end date.
+
+```js
+countdown({
+   endDate: '05/14/2013',
+   output: '{days} days left!',
+   singularOutput: 'Just one more day left!',
+   endText: 'The wait is over!'
+})
+```
