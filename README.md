@@ -12,6 +12,19 @@ Grabs only the base of any given URL. You can also hide the TLD.
 baseURL('http://www.maxvoltar.com/archive/more-beats')
 ```
 
+__countdown__
+
+Display a simple countdown from the current time to a defined end date.
+
+```js
+countdown({
+   endDate: '05/14/2013',
+   output: '{days} days left!',
+   singularOutput: 'Just one more day left!',
+   endText: 'The wait is over!'
+})
+```
+
 __readingtime__
 
 Returns the estimated time to complete reading of a text in a human readable format.
@@ -34,17 +47,4 @@ Counts the words in any given string of text and counts the words correctly. You
 
 ```js
 wordcount('Hello, it\'s me', 'This is {count} words long.')
-```
-
-__countdown()__
-
-Display a simple countdown from the current time to a defined end date.
-
-```js
-countdown({
-   endDate: '05/14/2013',
-   output: '{days} days left!',
-   singularOutput: 'Just one more day left!',
-   endText: 'The wait is over!'
-})
 ```
