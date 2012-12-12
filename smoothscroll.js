@@ -1,9 +1,7 @@
 /**
- * Name                   smoothscroll()
- * Description            Scroll the body element to the top, only using
- *                        Vanilla JS.
+ * Scroll the body element to the top, only using Vanilla JS.
  *
- * smoothscroll()
+ * @example   smoothscroll()
  */
 
 var smoothscroll = function () {
