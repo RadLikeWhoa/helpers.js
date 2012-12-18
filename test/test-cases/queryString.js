@@ -46,7 +46,7 @@ test("Query String Extraction - Extract second field from URL with 3 query strin
     equal(expectedValue, actualValue, "Extraction of second field from query string failed. Expected value is 58892");
 });
 
-test("Query String Extraction - Extract second field from URL with 3 query strings", function() {
+test("Query String Extraction - Extract third field from URL with 3 query strings", function() {
     var url = "http://www.example.com?id=1000&orderId=58892&timestamp=1000465738";
     var field = "timestamp";
     var expectedValue = 1000465738;
