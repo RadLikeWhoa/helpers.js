@@ -9,5 +9,7 @@
 
 var queryString = function (url, field) {
     var match = RegExp('[?&]' + field + '=([^&]*)').exec(url);
-    return match && decodeURIComponent(match[1].replace(/\+/g, ' '));
+    if(!match)
+      return null;
+    return decodeURIComponent(match[1].replace(/\+/g, ' '));
 };
