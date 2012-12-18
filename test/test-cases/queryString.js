@@ -2,7 +2,7 @@ test("Query String Extraction - Extract query string from URL with no query stri
     var url = "http://www.example.com";
     var field = "id";
     var expectedValue = null;
-    var actualValue = queryString(field, url)
+    var actualValue = queryString(field, url);
     equal(expectedValue, actualValue, "Expect NULL value when no query strings exist");
 });
 
