@@ -8,11 +8,22 @@
  * Otherwise, returns NULL.
  */
 
-var queryString = function (field, url) {
-    if(!url)
-        url = window.location.search;
-    var match = RegExp('[?&]' + field + '=([^&]*)').exec(url);
-    if(!match)
-        return null;
-    return decodeURIComponent(match[1].replace(/\+/g, ' '));
+var queryString = function (value, url) {
+  var match = [],
+      query = {};
+  
+  url = url || window.location.search;
+  
+  if (value) {
+    match = new RegExp('[?&]' + value + '=([^&]*)').exec(url)[0].replace(/[?&]/, '').split('=');
+  } else {
+    url = url.replace(/\?/, '').split('&');
+
+    for (var i = 0; i < url.length; i++) {
+      var field = url[i].split('=');
+      query[field[0]] = decodeURIComponent(field.replace(/\+/g, ' '));
+    }
+  }
+
+  return value ? decodeURIComponent(match[1].replace(/\+/g, ' ')) : query;
 };
