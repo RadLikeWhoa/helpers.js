@@ -1,11 +1,10 @@
 /**
  * Extract query strings from a URL.
  *
- * @param {field} field The field in the query string to look up.
- * @param {string} [url] The URL to be parsed. If not specified, the query string portion of the current URL will be used.
+ * @param [value] {string} The field in the query string to look up. (default: null)
+ * @param [url] {string} The URL to be parsed. If not specified, the query string portion of the current URL will be used.
  * 
- * @return {string} Returns the value of the field if it exists in the query string.
- * Otherwise, returns NULL.
+ * @return {string} Returns the value of the field if it exists in the query string. If no field is given, the whole querystring is returned as an object.
  */
 
 var queryString = function (value, url) {
