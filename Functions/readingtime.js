@@ -9,7 +9,7 @@
  * @param     {number}    words     The number of words.
  * @param     {string}    format    The format to be used for the output. Use `{time}` as a placeholder. (default: {time})
  * @param     {number}    wpm       The value for words per minute. (default: 180)
- * 
+ *
  * @return    {string}    Returns the human-readable time.
  */
 

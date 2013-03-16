@@ -1,29 +1,72 @@
 # helpers.js
 
-A collection of small JavaScript helper functions for various use cases. All of these little snippets solve problems that are very common, but don't have a widespread decent implementation.
+A collection of small JavaScript helper functions for various use cases. All of these little snippets solve problems that are very common, but don't have a widespread decent implementation. Most functions are available as easy-to-use prototypes on their respective objects.
 
----
+## Number
 
-__baseURL__
+__Number.round__
 
-Grabs only the base of any given URL. You can also hide the TLD.
-
-```js
-baseURL('http://www.maxvoltar.com/archive/more-beats')
-```
-
-__countdown__
-
-Display a simple countdown from the current time to a defined end date.
+Rounds a number to a given precision and omits trailing 0 values.
 
 ```js
-countdown({
-   endDate: '05/14/2013',
-   output: '{days} days left!',
-   singularOutput: 'Just one more day left!',
-   endText: 'The wait is over!'
-})
+100.51235.round(3);
 ```
+
+    100.512
+
+## String
+
+__String.base__
+
+Gets only the base of a given URL.
+
+```js
+'https://www.twitter.com/RadLikeWhoa_'.base();
+```
+
+    'twitter.com'
+
+__String.format__
+
+Format a string using placeholders like `{0}`.
+
+```js
+'{0}, hello {1} world!'.format('Oh', 'beautiful');
+```
+
+    'Oh, hello beautiful world!'
+
+__String.insert__
+
+Insert a string into another one at a given numerical index or a keyword.
+
+```js
+'I am here.'.insert('in between ', 5);
+```
+
+    'I am in between here.'
+
+__String.truncate__
+
+Truncates the string to the given length and replaces superfluous characters with the given substitute.
+
+```js
+'This is a longer text'.truncate(15);
+```
+
+    'This is a long…'
+
+__String.words__
+
+Count the words inside a given element. The output can be formatted using the `{{count}}` placeholder.
+
+```js
+'Hello, world!'.words();
+```
+
+    2
+
+## Functions
 
 __readingtime__
 
@@ -33,18 +76,4 @@ Returns the estimated time to complete reading of a text in a human readable for
 readingtime(2720, 'Reading this takes {time}.', 270)
 ```
 
-__smoothscroll__
-
-Scrolls the body element smoothly to the top using only Vanilla JS.
-
-```js
-smoothscroll()
-```
-
-__wordcount__
-
-Counts the words in any given string of text and counts the words correctly. You can define the output using a placeholder.
-
-```js
-wordcount('Hello, it\'s me', 'This is {count} words long.')
-```
+    'Reading this takes about 10 minutes.'
