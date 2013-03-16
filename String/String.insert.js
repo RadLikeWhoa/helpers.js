@@ -12,5 +12,5 @@
 
 String.prototype.insert = String.prototype.insert || function (value, position) {
   position = position === 'end' ? this.length : position === 'start' ? 0 : position;
-  return this.slice(0, position) + string + this.slice(position);
+  return this.slice(0, position) + value + this.slice(position);
 };
