@@ -12,3 +12,6 @@ build:
 	@./node_modules/.bin/uglifyjs helpers.js > helpers.min.js -mc
 	@echo " Built \033[32mhelpers.js\033[39m at ${DATE}.\n"
 	@echo "${HR}\n"
+
+test:
+	@open tests/index.html

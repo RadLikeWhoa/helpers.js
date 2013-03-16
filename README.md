@@ -11,7 +11,7 @@ A collection of small JavaScript helper functions for various use cases. All of 
 Rounds a number to a given precision and omits trailing 0 values.
 
 ```js
-100.51235.round(3);
+100.51235.round(3)
 ```
 
     100.512
@@ -23,7 +23,7 @@ Rounds a number to a given precision and omits trailing 0 values.
 Gets only the base of a given URL.
 
 ```js
-'https://www.twitter.com/RadLikeWhoa_'.base();
+'https://www.twitter.com/RadLikeWhoa_'.base()
 ```
 
     'twitter.com'
@@ -33,7 +33,7 @@ Gets only the base of a given URL.
 Format a string using placeholders like `{0}`.
 
 ```js
-'{0}, hello {1} world!'.format('Oh', 'beautiful');
+'{0}, hello {1} world!'.format('Oh', 'beautiful')
 ```
 
     'Oh, hello beautiful world!'
@@ -43,7 +43,7 @@ Format a string using placeholders like `{0}`.
 Insert a string into another one at a given numerical index or a keyword.
 
 ```js
-'I am here.'.insert('in between ', 5);
+'I am here.'.insert('in between ', 5)
 ```
 
     'I am in between here.'
@@ -53,7 +53,7 @@ Insert a string into another one at a given numerical index or a keyword.
 Truncates the string to the given length and replaces superfluous characters with the given substitute.
 
 ```js
-'This is a longer text'.truncate(15);
+'This is a longer text'.truncate(15)
 ```
 
     'This is a long…'
@@ -63,7 +63,7 @@ Truncates the string to the given length and replaces superfluous characters wit
 Count the words inside a given element. The output can be formatted using the `{{count}}` placeholder.
 
 ```js
-'Hello, world!'.words();
+'Hello, world!'.words()
 ```
 
     2
