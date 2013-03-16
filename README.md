@@ -2,9 +2,11 @@
 
 A collection of small JavaScript helper functions for various use cases. All of these little snippets solve problems that are very common, but don't have a widespread decent implementation. Most functions are available as easy-to-use prototypes on their respective objects.
 
+---
+
 ## Number
 
-__Number.round__
+### Number.round
 
 Rounds a number to a given precision and omits trailing 0 values.
 
@@ -16,7 +18,7 @@ Rounds a number to a given precision and omits trailing 0 values.
 
 ## String
 
-__String.base__
+### String.base
 
 Gets only the base of a given URL.
 
@@ -26,7 +28,7 @@ Gets only the base of a given URL.
 
     'twitter.com'
 
-__String.format__
+### String.format
 
 Format a string using placeholders like `{0}`.
 
@@ -36,7 +38,7 @@ Format a string using placeholders like `{0}`.
 
     'Oh, hello beautiful world!'
 
-__String.insert__
+### String.insert
 
 Insert a string into another one at a given numerical index or a keyword.
 
@@ -46,7 +48,7 @@ Insert a string into another one at a given numerical index or a keyword.
 
     'I am in between here.'
 
-__String.truncate__
+### String.truncate
 
 Truncates the string to the given length and replaces superfluous characters with the given substitute.
 
@@ -56,7 +58,7 @@ Truncates the string to the given length and replaces superfluous characters wit
 
     'This is a long…'
 
-__String.words__
+### String.words
 
 Count the words inside a given element. The output can be formatted using the `{{count}}` placeholder.
 
@@ -68,7 +70,7 @@ Count the words inside a given element. The output can be formatted using the `{
 
 ## Functions
 
-__readingtime__
+### readingtime
 
 Returns the estimated time to complete reading of a text in a human readable format.
 
