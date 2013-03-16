@@ -11,4 +11,4 @@
 
 Number.prototype.round = Number.prototype.round || function (precision) {
   return Math.round(this * Math.pow(10, (precision || 2))) / Math.pow(10, (precision || 2));
-}
+};
