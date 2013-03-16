@@ -10,7 +10,6 @@
  * @return   {String} Returns the new string.
  */
 
-String.prototype.insert = String.prototype.insert || function (value, position) {
-  position = position === 'end' ? this.length : position === 'start' ? 0 : position;
-  return this.slice(0, position) + value + this.slice(position);
-};
+String::insert = String::insert or (value, position) ->
+  position = if position is 'end' then @length else if position is 'start' then 0 else position
+  @slice(0, position) + value + @slice(position)

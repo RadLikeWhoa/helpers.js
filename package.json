@@ -11,6 +11,7 @@
   "license": "MIT",
   "devDependencies": {
     "uglify-js": "~2.2.5",
-    "jshint": "~1.1.0"
+    "jshint": "~1.1.0",
+    "coffee-script": "~1.6.1"
   }
 }

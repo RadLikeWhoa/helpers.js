@@ -9,7 +9,6 @@
  * @return   {String} Returns the new URL's base.
  */
 
-String.prototype.base = String.prototype.base || function (hideTLD) {
-  var base = this.replace(/(http(s)?:\/\/)?(www\.)?/, '').split('/')[0];
-  return hideTLD ? base.split('.')[0] : base;
-};
+String::base = String::base or (hideTLD) ->
+  base = @replace(/(http(s)?:\/\/)?(www\.)?/, '').split('/')[0]
+  if hideTLD then base.split('.')[0] else base

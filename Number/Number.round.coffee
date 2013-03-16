@@ -9,6 +9,5 @@
  * @return   {Number} The given number, rounded to the given precision.
  */
 
-Number.prototype.round = Number.prototype.round || function (precision) {
-  return Math.round(this * Math.pow(10, (precision || 2))) / Math.pow(10, (precision || 2));
-};
+Number::round = Number::round or (precision) ->
+  Math.round(@ * Math.pow(10, (precision or 2))) / Math.pow(10, (precision or 2))
