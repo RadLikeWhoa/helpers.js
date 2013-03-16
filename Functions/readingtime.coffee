@@ -1,17 +1,16 @@
-/**
- * Display the time it takes to read a given amount of
- *   words. The output can be formatted using the {time}
- *   placeholder. A reading speed of 180 words per minute
- *   (wpm) is assumed, though this can be changed.
- *
- * @example   readingtime(2720, 'Reading this takes {time}.', 270)
- *
- * @param     {number}    words     The number of words.
- * @param     {string}    format    The format to be used for the output. Use `{time}` as a placeholder. (default: {time})
- * @param     {number}    wpm       The value for words per minute. (default: 180)
- *
- * @return    {string}    Returns the human-readable time.
- */
+###
+Display the time it takes to read a given amount of words. The output can be
+formatted using the {time} placeholder. A reading speed of 180 words per minute
+(wpm) is assumed, though this can be changed.
+
+@example   readingtime 2720, 'Reading this takes {time}.', 270
+
+@param     {number}    words     The number of words.
+@param     {string}    format    The format to be used for the output. Use `{time}` as a placeholder. (default: {time})
+@param     {number}    wpm       The value for words per minute. (default: 180)
+
+@return    {string}    Returns the human-readable time.
+###
 
 readingtime = (words, format, wpm) ->
   text = format or '{time}'
