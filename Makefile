@@ -14,4 +14,9 @@ build:
 	@echo "${HR}\n"
 
 test:
+	@echo "\n${HR}\n"
+	@echo " Running JSHint...              ${CHECK} Done"
+	@./node_modules/.bin/jshint tests/units/*.js --config .jshintrc
+	@echo " Opening QUnit results...       ${CHECK} Done"
 	@open tests/index.html
+	@echo "\n${HR}\n"
