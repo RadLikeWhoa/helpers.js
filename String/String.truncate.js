@@ -14,5 +14,5 @@
  */
 
 String.prototype.truncate = String.prototype.truncate || function (length, substitute) {
-  return this.length > (length || 30) ? this.substr(0, (length || 30)).replace(/\s$/, '') + (substitute || '…') : this.toString();
-};
+  return this.length > (length || 30) ? this.substr(0, (length || 30)).replace(/\s$/, '') + (substitute || '…') : this.toString()
+}

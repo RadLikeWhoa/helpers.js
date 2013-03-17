@@ -9,5 +9,5 @@
  */
 
 String.prototype.words = String.prototype.words || function () {
-  return this.replace(/\s+/g, ' ').split(' ').length;
-};
+  return this.replace(/\s+/g, ' ').split(' ').length
+}

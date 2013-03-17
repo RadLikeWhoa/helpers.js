@@ -8,13 +8,11 @@
  */
 
 String.prototype.format = String.prototype.format || function () {
-  var string = this,
-      i = 0,
-      args = arguments.length;
+  var string = this
 
-  for (; i < args; i++) {
-    string = string.replace(new RegExp('\\{' + i + '\\}', 'gm'), arguments[i]);
+  for (var i = 0, j = arguments.length; i < j; i++) {
+    string = string.replace(new RegExp('\\{' + i + '\\}', 'gm'), arguments[i])
   }
 
-  return string;
-};
+  return string
+}

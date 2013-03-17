@@ -11,6 +11,6 @@
  */
 
 String.prototype.base = String.prototype.base || function (hideTLD) {
-  var base = this.replace(/(http(s)?:\/\/)?(www\.)?/, '').split('/')[0];
-  return hideTLD ? base.split('.')[0] : base;
-};
+  var base = this.replace(/(http(s)?:\/\/)?(www\.)?/, '').split('/')[0]
+  return hideTLD ? base.split('.')[0] : base
+}

@@ -5,7 +5,7 @@ DATE=$(shell date +%I:%M%p)
 build:
 	@echo "\n${HR}\n"
 	@echo " Running JSHint...              ${CHECK} Done"
-	@./node_modules/.bin/jshint Functions/*.js Number/*.js String/*.js
+	@./node_modules/.bin/jshint Functions/*.js Number/*.js String/*.js --config .jshintrc
 	@echo " Concatenating files...         ${CHECK} Done"
 	@cat Functions/*.js Number/*.js String/*.js > helpers.js
 	@echo " Running UglifyJS...            ${CHECK} Done"
