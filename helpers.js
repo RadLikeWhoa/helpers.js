@@ -1,4 +1,12 @@
 /**
+ * helpers.js — Small JavaScript functions for common use cases.
+ * 
+ * @version 2.0.0
+ * @license MIT
+ * @author  Sacha Schmid (http://sachaschmid.ch)
+ */
+
+/**
  * Display the time it takes to read a given amount of words. The output can be
  * formatted using the {time} placeholder. A reading speed of 180 words per
  * minute (wpm) is assumed, though this can be changed.
@@ -37,7 +45,9 @@ var readingtime = function (words, format, wpm) {
   }
 
   return replacePlaceholder()
-}/**
+};
+
+/**
  * Rounds a number to a given precision and omits trailing 0 values.
  *
  * @example  100.51235.round(3)
@@ -51,7 +61,9 @@ var readingtime = function (words, format, wpm) {
 
 Number.prototype.round = Number.prototype.round || function (precision) {
   return Math.round(this * Math.pow(10, (precision || 2))) / Math.pow(10, (precision || 2))
-}/**
+};
+
+/**
  * Gets only the base of a given URL.
  *
  * @example  'https://www.twitter.com/mantia'.base()
@@ -66,7 +78,9 @@ Number.prototype.round = Number.prototype.round || function (precision) {
 String.prototype.base = String.prototype.base || function (hideTLD) {
   var base = this.replace(/(http(s)?:\/\/)?(www\.)?/, '').split('/')[0]
   return hideTLD ? base.split('.')[0] : base
-}/**
+};
+
+/**
  * Format a string using placeholders like `{0}`.
  *
  * @example  '{0}, hello {1} world!'.format('Oh', 'beautiful')
@@ -83,7 +97,9 @@ String.prototype.format = String.prototype.format || function () {
   }
 
   return string
-}/**
+};
+
+/**
  * Insert a string into another one at a given numerical index or a keyword.
  *
  * @example  'I am here.'.insert('in between ', 5)
@@ -100,7 +116,9 @@ String.prototype.format = String.prototype.format || function () {
 String.prototype.insert = String.prototype.insert || function (value, position) {
   position = position === 'end' ? this.length : position === 'start' ? 0 : position
   return this.slice(0, position) + value + this.slice(position)
-}/**
+};
+
+/**
  * Truncates the string to the given length and replaces superfluous characters
  * with the given substitute.
  *
@@ -117,7 +135,9 @@ String.prototype.insert = String.prototype.insert || function (value, position) 
 
 String.prototype.truncate = String.prototype.truncate || function (length, substitute) {
   return this.length > (length || 30) ? this.substr(0, (length || 30)).replace(/\s$/, '') + (substitute || '…') : this.toString()
-}/**
+};
+
+/**
  * Count the words inside a given element. The output can be formatted using
  * the `{{count}}` placeholder.
  *
