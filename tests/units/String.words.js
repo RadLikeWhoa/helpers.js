@@ -1,7 +1,7 @@
 (function () {
   module('String.words')
 
-  test('should return word count of 2', function () {
-    ok('Hello, world!'.words() === 2)
+  test('should return correct word count', function () {
+    equal('Hello, world!'.words(), 2, 'returns word count of 2')
   })
 }())

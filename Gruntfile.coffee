@@ -6,7 +6,7 @@ module.exports = (grunt) ->
     banner: '/**\n * <%= pkg.name %> — <%= pkg.description %>\n' +
             ' * \n' +
             ' * @version <%= pkg.version %>\n' +
-            ' * @license <%= pkg.license %>\n' +
+            ' * @license <%= pkg.license.type %>\n' +
             ' * @author  <%= pkg.author %>\n' +
             ' */\n',
     src: [ 'Functions/*.js', 'Number/*.js', 'String/*.js' ],
