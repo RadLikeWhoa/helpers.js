@@ -1,15 +1,11 @@
 (function () {
   module('String.insert')
 
-  test('should insert at beginning of string', function () {
-    ok('awesome.'.insert('This is ', 'start') === 'This is awesome.')
-  })
-
-  test('should insert into string at index', function () {
-    ok('I am here.'.insert('in between ', 5) === 'I am in between here.')
-  })
-
-  test('should insert at end of string', function () {
-    ok('Hello'.insert(' world.', 'end') === 'Hello world.')
+  test('should insert string into existing string', function () {
+    equal('awesome.'.insert('This is ', 'start'), 'This is awesome.', 'inserts at beginning of string')
+    equal('I am here.'.insert('in between ', 5), 'I am in between here.', 'inserts at given index')
+    equal('Hello'.insert(' world.', 'end'), 'Hello world.', 'inserts at end of string')
+    equal('awesome.'.insert('This is '), 'This is awesome.', 'inserts at beginning of string when no position is given')
+    equal('awesome.'.insert(), 'awesome.', 'inserts nothing when no parameter is given')
   })
 }())

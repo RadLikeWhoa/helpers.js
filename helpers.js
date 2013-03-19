@@ -1,7 +1,7 @@
 /**
  * helpers.js — Small JavaScript functions for common use cases.
  * 
- * @version 2.0.0
+ * @version 2.1.1
  * @license MIT
  * @author  Sacha Schmid (http://sachaschmid.ch)
  */
@@ -114,7 +114,8 @@ String.prototype.format = String.prototype.format || function () {
  */
 
 String.prototype.insert = String.prototype.insert || function (value, position) {
-  position = position === 'end' ? this.length : position === 'start' ? 0 : position
+  if (!value) return this;
+  position = position === 'end' ? this.length : position === 'start' ? 0 : position || 0
   return this.slice(0, position) + value + this.slice(position)
 };
 
