@@ -1,9 +1,9 @@
 /**
  * helpers.js — Small JavaScript functions for common use cases.
- * 
+ *
  * @version 2.1.1
  * @license MIT
- * @author  Sacha Schmid (http://sachaschmid.ch)
+ * @author  Sacha Schmid (http://sacha.me)
  */
 
 /**
